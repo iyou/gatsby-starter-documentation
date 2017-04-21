@@ -11,7 +11,7 @@ script:
   - gatsby build
 deploy:
   provider: pages
-  local_dir: webapp/public
+  local_dir: public
   skip_cleanup: true
   github_token: $github_token
   on:
