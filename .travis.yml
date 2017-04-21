@@ -1,23 +1,20 @@
 language: node_js
-
 node_js:
-  - "iojs"
-  - "7"
-
+- iojs
+- '7'
 branches:
   only:
   - master
-
 before_script:
-  - npm install
-
+- npm install
 script:
-  - gatsby build
-
+- gatsby build
 deploy:
   provider: pages
   local_dir: public
   skip_cleanup: true
-  # github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
+env:
+  global:
+    secure: v0wJx199T5jypfva5H+2IehJ9t4sOz0sm0Sp1MBZVpzwY1Vt34xHt2IlliCYLSXB8KudC0pJSPMLNmUAdRAsPzrl7UZ63eH9mPVQg7prw3qxgMFtjJNSYzUFWM+LY+/k04KAFPmZcKgXQ0TmvMg4p4Hi5URKpmtmaOnNQXFvhZu0Pw/cwZW26wSgW0CAuSKZJ5xscvjbAvHMwepxKUGaxEkB+ao7W70ChpsHvylUcqMuXuVJYhHSubGHk24BzImnFfT044lg8nNNPjGSQL/cel+EnL0S2A/WJD3VJvXs+lqjPMOrdYhaFdF9enp6AmBo5UDAxxK0wyLDcEA5mvDwDVOg8LzaH5RwxA3otqBhwCQKvHhAYc82pRgaOnemqgUMF+AjivPr2hQOC6qXe1ahZD5F6UQMb7aRlE8AA92btYzKzzGTkDB4XWOSNkFdmg9sHLMSyblXTyqYaxbkwMeZ58GRHnw6IJwk3wiGFOaJuSASY7vc7L6ATYwWYByc8WX2rwG3etTLBibLRegM5LEjZGC0KcJk/5XEUwt+yMl8NJJUUO+Qq/rCMxMoRQWVzHdKOsu8nAjChbxANkWvocKprfrP9lVGIznFh93ZLV/I7yFJQuQbwkMoggDv15kuyhgaEZCJ8nHQXfb0bxEjl6qk13RBQgsgKV6t0ohAxwzcNUs=
