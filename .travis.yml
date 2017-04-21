@@ -2,25 +2,20 @@ language: node_js
 node_js:
   - iojs
   - '7'
-
 branches:
   only:
-  - master
-
+    - master
 before_script:
   - npm install
-
 script:
   - gatsby build
-
 deploy:
   provider: pages
   local_dir: public
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  api_key: "$GITHUB_TOKEN"
   on:
     branch: master
-
 env:
   global:
-    - secure: ckE7UKr80vWIAsFrKvfGCewXTDayJT7Fij20zi0f89lQnfUL5r7ekN3xh+Lmt0cfBPvm/fQZ2zaVtl6J/obSPbgQV3RWjMlW9f72IT9a4qXdHfZF65NGKRSgJZc2TDjl6O30e+pI1KMnvPVqxY7RR+TP1DguNMlLg7uXIMPuTFF6cS0VjIOlfMdRD3FiP0MDRFX6TF7MqLRGCJZf9Pl5pe3gwGF+7oc9VqG/tXp23U2VEyLhh0ZJW8I40lCdNVxOg1+9TnKq1R8Lsaqf8vdbzAKUKplKNi2F0oTKM+ruucood5MBSCoUkPPaoFafBEGCTQ7SKEo9SK9oxQ8P9aPQP0davyNnwcf//yBsYuZRHVUDBNvC5JQj4I2VwHUM7W50SuuPefyvPERftbDPqpNZHJOuiRf05FxC+J8RXWdaCo6IM2ruFGOeS8vZEHRa7ln5AXMWjNbVlEBLwtI9r1eiNPT82Rgvo4XJRmmwRqosVjtRLLC8AaSnh7Q0961hen3SP+heNWjFV843SuhnFZvQEYiEDTDZ1AO1eBLSSt8UgOHATpC3dKKiNI3dfL42OUpxCLdN0VVt9ItQvcrecxUz0DDYIM9pO2U6Gt59OfHwp/OMTealQF8Xvh6V6SVZuWaubiooVtwdWcbBHJfg5AbSAAClR90nZDDnb2vD4S/e2V8=
+    - secure: Qf6JjerBciZJSctmhncZapwzq2LBXSSHRYRSp44h2tAmTkC8C9o7+DTjJlTU0Mxp4yJMyfcITjSdaHA3Nd8yVc55SgvHMHGs39d+pBZ06cE+r4wTMcL0uvved8/IVl8n8TNs5lwK6szEaI5JPBko4+p4HipKTu9F8OFVxKsstds8zPd/ShiNGS2Dp4DXaRl9PNKMEDCTDYYY2WIT9ZaJMhKMa5CN1C2mwxGxbVr1EqkJT+zEKkelAddM2A1O2ETTt60gyAy2Zz03rOuEKAKjJau5USgzP3pv4EXnAm3fjMp0RAPner3h1OdgQzbeEsEqPWni/bNO26Ojdcx0dIFbQJyR7XOjzyNthau4MMy6tSiPM30HRKmA1PMl5jHUJnXRE1cxDK7/YomHl6H7e1vgeTgfG3Rk0JlPpDnGWWwWLdbK7r5mULh/rbOp7IbO052u1bV0oAgFotQVUvLw5w7oxbiKNhc6nNqqchdaeOOTUOd+bj7LruIYAP56NUWrCUZAOeSCsdrcY5rrMsuiD7LyD5Eg0hPG25bHCUBkhOIMga+5i52F0OL9kZBCo5NIprEIpEYsWoE9vJmnEabzFMdjBiNnUJKxV7LaO4AVIyt1swYxEKZ7UyGR6bMICpra7SHi3xuebdrrr1BIXp0tqRI69J1PVjXYPC2XIznP8hz5ebw=
