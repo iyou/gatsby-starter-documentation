@@ -12,7 +12,7 @@ before_script:
   - npm install
 
 script:
-  -gatsby build
+  - gatsby build
 
 deploy:
   provider: pages
