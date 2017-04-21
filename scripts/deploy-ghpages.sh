@@ -3,7 +3,7 @@ set -x -e
 git clone git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -b master knotel-docs
 cd knotel-docs/webapp
 npm install
-npm install -g gatsby
+npm install gatsby
 gatsby build
 cd ../..
 mkdir -p docs
