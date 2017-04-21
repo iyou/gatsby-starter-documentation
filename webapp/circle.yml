@@ -1,0 +1,19 @@
+general:
+  build_dir: webapp
+  branches:
+    only:
+      - master
+
+machine:
+  node:
+    version: 5.0.0
+#
+# dependencies:
+#   pre:
+#     - npm install -g babel-cli
+
+deployment:
+  pages:
+    tag: /knotel.*/
+    commands:
+      - ./scripts/deploy-ghpages.sh
