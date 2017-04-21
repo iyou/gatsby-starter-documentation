@@ -9,7 +9,7 @@ machine:
 
 test:
   override:
-    - "true"
+    - /bin/true
 
 deployment:
   pages:
