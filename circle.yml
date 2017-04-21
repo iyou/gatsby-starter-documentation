@@ -13,6 +13,6 @@ test:
 
 deployment:
   pages:
-    tag: /knotel.*/
+    branch: master
     commands:
       - ./scripts/deploy-ghpages.sh
