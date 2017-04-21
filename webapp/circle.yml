@@ -1,5 +1,4 @@
 general:
-  build_dir: webapp
   branches:
     only:
       - master
@@ -7,10 +6,10 @@ general:
 machine:
   node:
     version: 5.0.0
-#
-# dependencies:
-#   pre:
-#     - npm install -g babel-cli
+
+test:
+  override:
+    - "true"
 
 deployment:
   pages:
