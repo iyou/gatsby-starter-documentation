@@ -13,4 +13,4 @@ cd $CIRCLE_PROJECT_REPONAME/webapp
 MESSAGE="CircleCI[$CIRCLE_BUILD_NUM]: $CIRCLE_SHA1@$CIRCLE_BRANCH [ci skip]"
 
 npm install
-COMMIT_MESSAGE=$MESSAGE npm run deploy
+COMMIT_MESSAGE="$MESSAGE" npm run deploy
