@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x -e
 git clone git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -b master knotel-docs
-cd docs/webapp
+cd knotel-docs/webapp
 npm install
 gatsby build
 cd ../..
