@@ -4,7 +4,7 @@ git clone git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -
 cd knotel-docs/webapp
 npm install
 npm install gatsby
-gatsby build
+`npm bin` gatsby build
 cd ../..
 mkdir -p docs
 cp -rf knotel-docs/webapp/public/* docs/
