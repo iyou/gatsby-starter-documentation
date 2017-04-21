@@ -5,12 +5,13 @@ branches:
   only:
     - master
 before_script:
+  - cd webapp
   - npm install
 script:
   - gatsby build
 deploy:
   provider: pages
-  local_dir: public
+  local_dir: webapp/public
   skip_cleanup: true
   github_token: $github_token
   on:
